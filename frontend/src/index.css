@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Paleta padrão (valores em RGB para o Tailwind aplicar opacidade) */
+:root {
+  --bg: 255 255 255;
+  --surface: 244 246 251;
+  --ink: 16 24 40;
+  --muted: 71 84 103;
+  --line: 208 213 221;
+  --line-strong: 102 112 133;
+  --brand: 29 63 191;
+  --brand-fg: 255 255 255;
+  --brand-soft: 235 240 255;
+  --accent: 255 194 26;
+  --accent-fg: 16 24 40;
+  --danger: 180 35 24;
+  --danger-soft: 254 243 242;
+  --ok: 2 122 72;
+  --ok-soft: 236 253 243;
+  --warn: 181 71 8;
+  --warn-soft: 255 247 230;
+}
+
+/* Modo de alto contraste, ativado pelo botão da barra de acessibilidade */
+.alto-contraste {
+  --bg: 0 0 0;
+  --surface: 15 15 15;
+  --ink: 255 255 255;
+  --muted: 235 235 235;
+  --line: 255 255 255;
+  --line-strong: 255 255 255;
+  --brand: 255 214 0;
+  --brand-fg: 0 0 0;
+  --brand-soft: 25 25 25;
+  --accent: 0 229 255;
+  --accent-fg: 0 0 0;
+  --danger: 255 140 140;
+  --danger-soft: 25 25 25;
+  --ok: 130 255 175;
+  --ok-soft: 25 25 25;
+  --warn: 255 205 110;
+  --warn-soft: 25 25 25;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg font-sans text-ink antialiased;
+    line-height: 1.6;
+  }
+  h1, h2, h3 {
+    @apply font-bold tracking-tight;
+    line-height: 1.2;
+  }
+  a {
+    @apply underline underline-offset-4;
+  }
+  :focus-visible {
+    outline: 3px solid rgb(var(--brand));
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border-2 border-transparent px-5 py-2 text-base font-bold no-underline transition-colors disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-primario {
+    @apply bg-brand text-brand-fg hover:opacity-90;
+  }
+  .btn-secundario {
+    @apply border-line-strong bg-bg text-ink hover:bg-surface;
+  }
+  .btn-perigo {
+    @apply bg-danger text-bg hover:opacity-90;
+  }
+  .cartao {
+    @apply rounded-xl border border-line bg-bg p-5;
+  }
+  .campo {
+    @apply min-h-12 w-full rounded-lg border-2 border-line-strong bg-bg px-3 py-2 text-base text-ink placeholder:text-muted aria-[invalid=true]:border-danger;
+  }
+  .container-pagina {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+  }
+}
