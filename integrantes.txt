@@ -1,7 +1,0 @@
-GLOBAL SOLUTION FIAP 2026/2 - CitizenTech
-Disciplina: Front-End Design Engineering
-Projeto: VozAtiva
-
-Integrantes:
-RM 561298 - Cléo Sales Vicente - 1TDSPI
-RM 563221 - Nicolly Martins de Souza - 1TDSPI
