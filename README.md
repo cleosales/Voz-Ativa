@@ -90,10 +90,4 @@ Na Vercel, cadastre `VITE_API_URL` em Settings > Environment Variables. O arquiv
 | Cléo Sales Vicente | 561298 | 1TDSPI |
 | Nicolly Martins de Souza | 563221 | 1TDSPI |
 
-Contato: _(preencher e-mail do grupo)_
-
-## Uso de IA generativa
-
-Foi utilizada a ferramenta Claude (Anthropic) como apoio no desenvolvimento do front-end (estrutura inicial e geração de código). O código foi revisado, testado e entendido pelo grupo. _(Ajuste este parágrafo para refletir fielmente o que vocês fizeram.)_
-
 Projeto acadêmico da Global Solution FIAP 2026/2.
