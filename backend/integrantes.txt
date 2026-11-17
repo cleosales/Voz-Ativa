@@ -1,0 +1,9 @@
+GLOBAL SOLUTION FIAP 2026/2
+
+Projeto: VozAtiva
+
+Integrantes:
+
+Nicolly Martins de Souza — RM 563221
+
+Cléo Sales Vicente — RM 561298
