@@ -1,4 +1,3 @@
-// Camada de serviços: todas as chamadas à API Java passam por aqui, usando somente Fetch.
 import type {
   Atualizacao,
   AtualizacaoEntrada,
@@ -63,13 +62,13 @@ async function requisitar<T>(caminho: string, opcoes: Opcoes = {}): Promise<Resp
   const texto = await resposta.text()
 
   if (!resposta.ok) {
-    // A API devolve { status, mensagem } em todos os erros
+
     let mensagem = mensagemPadrao(resposta.status)
     try {
       const json = JSON.parse(texto) as { mensagem?: string }
       if (json.mensagem) mensagem = json.mensagem
     } catch {
-      // corpo não era JSON: mantém a mensagem padrão
+      
     }
     throw new ApiError(resposta.status, mensagem)
   }
@@ -79,14 +78,14 @@ async function requisitar<T>(caminho: string, opcoes: Opcoes = {}): Promise<Resp
     try {
       dados = JSON.parse(texto)
     } catch {
-      dados = texto // os POST/PUT devolvem texto puro (ex.: "Ocorrência cadastrada com sucesso!")
+      dados = texto 
     }
   }
 
   return { dados: dados as T, location: resposta.headers.get('Location') }
 }
 
-/** Extrai o id do final do header Location (…/ocorrencias/12 -> 12). */
+
 function idDaLocation(location: string | null): number | null {
   if (!location) return null
   const ultimo = location.replace(/\/+$/, '').split('/').pop()

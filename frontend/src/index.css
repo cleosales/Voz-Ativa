@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Paleta padrão (valores em RGB para o Tailwind aplicar opacidade) */
 :root {
   --bg: 255 255 255;
   --surface: 244 246 251;
@@ -23,7 +22,6 @@
   --warn-soft: 255 247 230;
 }
 
-/* Modo de alto contraste, ativado pelo botão da barra de acessibilidade */
 .alto-contraste {
   --bg: 0 0 0;
   --surface: 15 15 15;

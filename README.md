@@ -17,8 +17,8 @@ O front conversa com a API pela variável `VITE_API_URL` (padrão `http://localh
 
 ```bash
 cd backend
-# defina DB_URL, DB_USER e DB_PASSWORD no ambiente
-./mvnw spring-boot:run        # Windows: mvnw.cmd spring-boot:run
+
+./mvnw spring-boot:run        
 ```
 
 A API sobe em `http://localhost:8080`. O script `backend/script.sql` cria as tabelas.

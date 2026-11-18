@@ -15,12 +15,10 @@ export const URGENCIA_ROTULO: Record<number, string> = {
   3: 'Alta',
 }
 
-/** Protocolo exibido ao cidadão, gerado a partir do id (ex.: 12 -> VA-0012). */
 export function formatarProtocolo(id: number): string {
   return `VA-${String(id).padStart(4, '0')}`
 }
 
-/** Lê "VA-0012", "va12" ou "12" e devolve o id numérico, ou null se inválido. */
 export function lerProtocolo(texto: string): number | null {
   const limpo = texto.trim().toUpperCase().replace(/^VA-?/, '')
   if (!/^\d+$/.test(limpo)) return null

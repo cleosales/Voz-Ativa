@@ -42,7 +42,6 @@ export default function Registrar() {
   const titulo = useRef<HTMLHeadingElement>(null)
   const primeiraVez = useRef(true)
 
-  // Ao mudar de passo, leva o foco ao título (ajuda quem usa teclado ou leitor de tela)
   useEffect(() => {
     if (primeiraVez.current) {
       primeiraVez.current = false

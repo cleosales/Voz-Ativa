@@ -1,5 +1,3 @@
-// As cores vêm de variáveis CSS (src/index.css) para o modo de alto contraste
-// trocar toda a paleta sem mexer nos componentes.
 const cor = (nome) => `rgb(var(--${nome}) / <alpha-value>)`
 
 /** @type {import('tailwindcss').Config} */

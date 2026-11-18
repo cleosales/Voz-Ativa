@@ -47,7 +47,6 @@ export default function OcorrenciaDetalhe() {
   const [resultado, setResultado] = useState<{ tipo: 'sucesso' | 'erro'; texto: string } | null>(null)
   const [confirmandoExclusao, setConfirmandoExclusao] = useState(false)
 
-  // formulário de nova atualização
   const [novoStatus, setNovoStatus] = useState('')
   const [textoAtualizacao, setTextoAtualizacao] = useState('')
   const [errosAtualizacao, setErrosAtualizacao] = useState<{ status?: string; texto?: string }>({})
@@ -100,12 +99,10 @@ export default function OcorrenciaDetalhe() {
   const categoria = categorias.find((c) => c.id === ocorrencia.categoriaId)
   const resolvida = ocorrencia.status === 'RESOLVIDA'
 
-  // Linha do tempo em ordem cronológica
   const atualizacoes = [...dados.atualizacoes].sort(
     (a, b) => new Date(a.dataAtualizacao).getTime() - new Date(b.dataAtualizacao).getTime(),
   )
 
-  // Só oferece status à frente do atual (o status avança na ordem prevista)
   const posicaoAtual = STATUS_ORDEM.indexOf(ocorrencia.status)
   const opcoesStatus = [{ valor: '', rotulo: 'Selecione o novo status' }]
   for (let i = posicaoAtual + 1; i < STATUS_ORDEM.length; i++) {

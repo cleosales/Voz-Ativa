@@ -65,7 +65,7 @@ Pré-requisitos: Node.js 18 ou superior.
 
 ```bash
 npm install
-cp .env.example .env     # ajuste VITE_API_URL
+cp .env.example .env     
 npm run dev
 ```
 
@@ -78,10 +78,11 @@ Na Vercel, cadastre `VITE_API_URL` em Settings > Environment Variables. O arquiv
 
 ## Links
 
-- GitHub: _(preencher)_
-- Vercel: _(preencher)_
+- GitHub: https://github.com/cleosales/vozativa-completo
+- Vercel: https://voz-ativacompleto-tawny.vercel.app
 - API Java (Render): _(preencher)_
 - Vídeo (YouTube): _(preencher)_
+- Contato: cleosales10@gmail.com · nicollymartins118@gmail.com
 
 ## Integrantes
 
@@ -90,10 +91,5 @@ Na Vercel, cadastre `VITE_API_URL` em Settings > Environment Variables. O arquiv
 | Cléo Sales Vicente | 561298 | 1TDSPI |
 | Nicolly Martins de Souza | 563221 | 1TDSPI |
 
-Contato: _(preencher e-mail do grupo)_
-
-## Uso de IA generativa
-
-Foi utilizada a ferramenta Claude (Anthropic) como apoio no desenvolvimento do front-end (estrutura inicial e geração de código). O código foi revisado, testado e entendido pelo grupo. _(Ajuste este parágrafo para refletir fielmente o que vocês fizeram.)_
 
 Projeto acadêmico da Global Solution FIAP 2026/2.

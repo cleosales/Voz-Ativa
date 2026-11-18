@@ -1,7 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
 
-// Tamanhos de letra em % do tamanho base do navegador
 const ESCALAS = [100, 115, 130, 150]
 const CHAVE = 'vozativa-acessibilidade'
 
@@ -31,7 +30,7 @@ function carregar(): Preferencias {
       }
     }
   } catch {
-    // localStorage indisponível: usa o padrão
+
   }
   return { escala: 100, altoContraste: false }
 }
@@ -45,7 +44,7 @@ export function AcessibilidadeProvider({ children }: { children: ReactNode }) {
     try {
       localStorage.setItem(CHAVE, JSON.stringify(prefs))
     } catch {
-      // sem persistência, mas a página continua funcionando
+      
     }
   }, [prefs])
 

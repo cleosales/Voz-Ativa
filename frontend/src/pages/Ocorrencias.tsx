@@ -43,7 +43,7 @@ export default function Ocorrencias() {
       if (busca && !o.bairro.toLowerCase().includes(busca)) continue
       resultado.push(o)
     }
-    // mais recentes primeiro
+   
     resultado.sort((a, b) => b.id - a.id)
     return resultado
   }, [dados, categoria, status, urgencia, bairro])
